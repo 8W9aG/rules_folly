@@ -83,7 +83,7 @@ glog_library(with_gflags = {})
     maybe(
         http_archive,
         name = "com_github_3rdparty_bazel_rules_libevent",
-        sha256 = "b4870bf121ff7795ba20d20bcdd8627b8e088f2d1dab299a031c1034eddc93d5",
+        sha256 = "3759be25757cd6c86f1d096656b8185d3af4ce2b2cccc0f582d251d2d7afbe21",
         urls = ["https://github.com/3rdparty/bazel-rules-libevent/archive/58f892d39007a50452f78bab7fa6c5756b8e02eb.zip"],
         strip_prefix = "bazel-rules-libevent-58f892d39007a50452f78bab7fa6c5756b8e02eb",
     )
