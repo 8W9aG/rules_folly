@@ -80,22 +80,13 @@ glog_library(with_gflags = {})
         )
 
     # ===== libevent (libevent.org) dependency =====
-    if with_syslibs:
-        maybe(
-            native.new_local_repository,
-            name = "com_github_libevent_libevent",
-            path = "/usr/include",
-            build_file = "@com_github_storypku_rules_folly//third_party/syslibs:libevent.BUILD",
-        )
-    else:
-        maybe(
-            http_archive,
-            name = "com_github_libevent_libevent",
-            sha256 = "316ddb401745ac5d222d7c529ef1eada12f58f6376a66c1118eee803cb70f83d",
-            urls = ["https://github.com/libevent/libevent/archive/release-2.1.8-stable.tar.gz"],
-            strip_prefix = "libevent-release-2.1.8-stable",
-            build_file = "@com_github_storypku_rules_folly//third_party/libevent:libevent.BUILD",
-        )
+    maybe(
+        http_archive,
+        name = "com_github_3rdparty_bazel_rules_libevent",
+        sha256 = "b4870bf121ff7795ba20d20bcdd8627b8e088f2d1dab299a031c1034eddc93d5",
+        urls = ["https://github.com/3rdparty/bazel-rules-libevent/archive/58f892d39007a50452f78bab7fa6c5756b8e02eb.zip"],
+        strip_prefix = "bazel-rules-libevent-58f892d39007a50452f78bab7fa6c5756b8e02eb",
+    )
 
     maybe(
         http_archive,
