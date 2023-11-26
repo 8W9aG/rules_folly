@@ -317,7 +317,7 @@ def folly_library(
             "@boost//:variant",
             "@com_github_google_glog//:glog",
             "@com_github_google_snappy//:snappy",
-            "@com_github_libevent_libevent//:libevent",
+            "@com_github_3rdparty_bazel_rules_libevent//:event",
             "@com_github_fmtlib_fmt//:fmt",
             "@double-conversion//:double-conversion",
             "@openssl//:ssl",
